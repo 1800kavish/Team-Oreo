@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#ffffff">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/sliding_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabBackground="@color/primary_color"
+            app:tabIndicatorColor = "@color/tan_background"
+            app:tabTextColor="@color/tan_background"
+            app:tabSelectedTextColor="@color/tan_background"/>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="210dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:context="com.example.android.availgovernmentschemes.MainActivity">
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="16dp"
+                android:text="Choose your Language:"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_pirates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="English"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_ninjas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:text="Hindi"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp" />
+            </RadioGroup>
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginRight="6dp"
+                android:text="Swipe for categories of Schemes"
+                android:textColor="@android:color/black"
+                android:textSize="19sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/numbers"
+                style="@style/CategoryStyle"
+                android:layout_marginEnd="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="NextActivity" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/v_flipper"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
